@@ -33,13 +33,9 @@ def create_app(environment: str):
     JWTManager(app)
 
     with app.app_context():
-        from .user_route import user_bp
         from .auth_route import auth_bp
-        from .org_route import org_bp
 
-        app.register_blueprint(user_bp)
         app.register_blueprint(auth_bp)
-        app.register_blueprint(org_bp)
 
         db.create_all()
 
