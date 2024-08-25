@@ -14,7 +14,7 @@ class Config:
     """
     SECRET_KEY = os.getenv('APP_SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = os.getenv('DB_URI')
-    SQLALCHEMY_ECHO = True
+    SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = False
     TESTING = False
